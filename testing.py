@@ -62,14 +62,13 @@ def determinant_speed(matrix_apy, matrix_acc):
 
 
 if __name__ == "__main__":
-    rows = 500
-    cols = 500
-    repetitions = 1
-
+    rows = int(input("Enter the size of the matrix: "))
+    cols = rows
+    repetitions = int(input("Enter the number of repetitions: "))
     set_repetitions(repetitions)
     matrix_apy,matrix_acc= generate_random_matrix(rows, cols)
     matrix_bpy, matrix_bcc = generate_random_matrix(rows, cols)
-    
+    print("-----------------------------------------------------------------")
     mul_matrix_speed(matrix_apy, matrix_bpy, matrix_acc, matrix_bcc)
     number = random.random()
     mul_matrix_number_speed(matrix_apy, matrix_acc, number)
